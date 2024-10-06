@@ -8,14 +8,14 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style.css" />
 
-  <title>TechForce</title>
+  <title>PACE Explorer</title>
 </head>
 
 <body>
   <nav>
     <div class="nav__header">
       <div class="logo nav__logo">
-        <a href="#">Tech<span>Force</span></a>
+        <a href="#">PACE<span> Explorer</span></a>
       </div>
       <div class="nav__menu__btn" id="menu-btn">
         <span><i class="ri-menu-line"></i></span>
@@ -70,7 +70,7 @@
 
 
   <section class="section__container special__container" id="special">
-    <h2 class="section__header"> The Problem. </h2>
+    <h2 class="section__header"> The Problem and how can you help?</h2>
     <img src="secondastronaut.png" alt="header" class="image" style="display: block; float: left; padding-top: 20px; width: 30%; height: auto;">
     <p class="section__description">
       The lack of PACE literacy poses a significant threat to our planet's sustainability. PACE, which encompasses Plankton, Aerosol, Cloud, and ocean Ecosystems, forms the foundation of Earth's climate and ecosystem balance. However, widespread ignorance about these interconnected systems hinders our ability to address pressing environmental issues. Limited understanding of phytoplankton's role in oxygen production, aerosol's impact on climate, and cloud formation's influence on weather patterns restricts informed decision-making. Moreover, inadequate PACE literacy among policymakers, educators, and the general public impedes the development of effective strategies to mitigate climate change, protect marine ecosystems, and ensure global food security. As a result, fostering PACE literacy is crucial for promoting environmental stewardship, and safeguarding the health of our planet for future generations.
@@ -88,7 +88,7 @@
         </p>
         <div class="special__footer">
           <a href="https://climate.nasa.gov/explore/ask-nasa-climate/192/adapting-to-climate-change/">
-            <button class="btn">Read More!</button>
+            
           </a>
         </div>
       </div>
@@ -101,7 +101,7 @@
         <div class="special__footer">
           <a
             href="https://www.state.gov/reports/united-states-strategy-to-respond-to-the-effects-of-climate-change-on-women-2023/">
-            <button class="btn">Read More!</button>
+            
           </a>
         </div>
       </div>
@@ -115,7 +115,7 @@
         <div class="special__footer">
           <a
             href="https://www.unwomen.org/en/news-stories/explainer/2022/02/explainer-how-gender-inequality-and-climate-change-are-interconnected">
-            <button class="btn">Read More!</button>
+           
           </a>
 
         </div>
@@ -126,129 +126,86 @@
 
 
 
-
   
-
+<!--- Flashcard-->
   <section class="section__container special__container" id="special">
     <h2 class="section__header">Flashcards</h2>
     <p class="section__description">
      <p class="section__description">
        <span class="text"> 
          Our fun and easy to use flashcards will help you about PACE and it's mission. These flashcards are based on <b>NASA PACE data</b>, allowing for more accurate information being taught as well. 
-           </span>
+           </span> <br></br></section>
 
-  <style>
-    .card-wrapper {
-        width: 25rem;
-        height: 200px;
-        position: relative;
-        margin: 0 auto;
-    }
-    .card-body {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        transition: transform 0.6s;
-        transform-style: preserve-3d;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.2), 0 5px 15px rgba(0,0,0,0.19);
-    }
-    .card-front, .card-back {
-        background-color: #ffffff;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden;
-        -webkit-backface-visibility: hidden;
-    }
-    .card-front p, .card-back p {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: large;
-        margin: 0;
-    }
-    .card-back {
-        transform: rotateX(180deg);
-    }
-    .card-wrapper:hover .card-body {
-        transform: rotateX(180deg);
-    }
-    .nav-button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: transparent;
-        border: none;
-        font-size: 2rem;
-        cursor: pointer;
-        z-index: 1;
-    }
-    .prev {
-        left: -40px;
-    }
-    .next {
-        right: -40px;
-    }
 
-  </style>
   </head>
   <body>
 
-  <div class="card-wrapper">
-    <div class="card-body">
+    <div class="card-wrapper">
+      <div class="card-body">
         <div class="card-front">
-            <p>What does PACE stand for?</p>
+          <p id="card-front-text"></p>
         </div>
         <div class="card-back">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+          <p id="card-back-text"></p>
         </div>
+      </div>
+      <button class="nav-button prev" onclick="prevCard()">&#9664;</button>
+      <button class="nav-button next" onclick="nextCard()">&#9654;</button>
     </div>
-    <button class="nav-button prev" onclick="prevCard()">&#9664;</button>
-    <button class="nav-button next" onclick="nextCard()">&#9654;</button>
-  </div>
 
   <script>
     const cards = [
-        {
-            front: "What does PACE stand for?",
-            back: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
-        },
-        {
-            front: "What is the capital of France?",
-            back: "The capital of France is Paris."
-        },
-        {
-            front: "What is 2 + 2?",
-            back: "2 + 2 equals 4."
-        }
+      {
+        front: "What does PACE stand for?",
+        back: "Plankton, Aerosol, Cloud, ocean Ecosystem"
+      },
+      {
+        front: "What is the primary goal of the PACE mission?",
+        back: "To study the ocean's ecosystems and their interactions with the atmosphere."
+      },
+      {
+        front: "Which important component of the Earth's climate system does PACE monitor?",
+        back: "Phytoplankton, which plays a crucial role in carbon cycling and oxygen production."
+      }
     ];
 
     let currentCard = 0;
 
     function updateCard() {
-        const cardBody = document.querySelector('.card-body');
-        const cardFront = document.querySelector('.card-front p');
-        const cardBack = document.querySelector('.card-back p');
+      const cardFront = document.getElementById('card-front-text');
+      const cardBack = document.getElementById('card-back-text');
+      const cardBody = document.querySelector('.card-body');
 
-        cardFront.textContent = cards[currentCard].front;
-        cardBack.textContent = cards[currentCard].back;
-        cardBody.style.transform = 'rotateX(0deg)'; // Reset to front
+      cardFront.textContent = cards[currentCard].front;
+      cardBack.textContent = cards[currentCard].back;
+      cardBody.classList.remove('flipped'); // Reset to front
     }
 
     function nextCard() {
-        currentCard = (currentCard + 1) % cards.length; // Loop back to start
-        updateCard();
+      currentCard = (currentCard + 1) % cards.length; // Loop back to start
+      updateCard();
     }
 
     function prevCard() {
-        currentCard = (currentCard - 1 + cards.length) % cards.length; // Loop to end
-        updateCard();
+      currentCard = (currentCard - 1 + cards.length) % cards.length; // Loop to end
+      updateCard();
     }
 
     // Initialize the first card
     updateCard();
+
+    // Add event listener for card flip
+    document.querySelector('.card-wrapper').addEventListener('click', (e) => {
+      if (e.target.classList.contains('card-body')) {
+        document.querySelector('.card-body').classList.toggle('flipped');
+      }
+    });
   </script>
+
+
+
+
+    <br></br>
   <!-- AI Assistant -->
   <section class="section__container special__container" id="feature">
     <h2 class="section__header">AI Assistant</h2>
@@ -281,6 +238,8 @@
   <script src="https://wizard-orpheus.hackclub.dev/wizard_orpheus.js"></script>
   <script src="script.js"></script>
 
+
+    
   <footer class="footer" id="contact">
     <div class="section__container footer__container">
       <div class="footer__col">

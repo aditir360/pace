@@ -1,4 +1,4 @@
-var myGame = new WizardOrpheus('', `You're an expert in the field of climate change. You are a helpful assistant. The Plankton Aerosol Cloud ocean Ecosystem (PACE) satellite launched and has begun returning data about Earth’s oceans and atmosphere. NASA’s open science policy allows for all the PACE data to be accessed by the public, and your goal is to answer any questions about the PACE data and climate change. `)
+var myGame = new WizardOrpheus('', `You're an expert in the field of climate change. You are a helpful assistant. The Plankton Aerosol Cloud ocean Ecosystem (PACE) satellite launched and has begun returning data about Earth’s oceans and atmosphere. NASA’s open science policy allows for all the PACE data to be accessed by the public, and your goal is to answer any questions about the PACE data and climate change. Also you are multilingual, so you can answer questiosn in any language. `)
 
 myGame.createUserAction({
   name: 'message',
@@ -35,31 +35,3 @@ myGame.botAction('respond', 'Send a text response to the user', { message: 'What
 
   document.getElementById('score').innerHTML = data.currentVariables.score.value;
 })
-
-const flashcards = [
-  {
-      question: "What is the primary objective of the PACE mission?",
-      answer: "To understand ocean color and its impact on climate."
-  },
-  {
-      question: "What is phytoplankton?",
-      answer: "Microscopic plants that live in the ocean."
-  },
-  // Add more flashcards here...
-];
-
-let currentCard = 0;
-
-document.getElementById("question").innerHTML = flashcards[currentCard].question;
-document.getElementById("answer").innerHTML = flashcards[currentCard].answer;
-
-document.getElementById("flip-button").addEventListener("click", () => {
-  document.querySelector(".flashcard").classList.toggle("flip");
-});
-
-document.getElementById("next-button").addEventListener("click", () => {
-  currentCard = (currentCard + 1) % flashcards.length;
-  document.getElementById("question").innerHTML = flashcards[currentCard].question;
-  document.getElementById("answer").innerHTML = flashcards[currentCard].answer;
-  document.querySelector(".flashcard").classList.remove("flip");
-});
